@@ -1,5 +1,5 @@
 # This is a demo for DO180
-FROM ubi7/ubi:7.7
+FROM registry.access.redhat.com/ubi7/ubi:7.7
 RUN yum install -y httpd iproute iputils \
     && yum clean all \
     && sed -i -e 's,^Listen 80$,Listen 8080,' /etc/httpd/conf/httpd.conf \
