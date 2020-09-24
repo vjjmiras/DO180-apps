@@ -1,4 +1,7 @@
 #!/bin/bash
 
-echo Calling internal assemble script
+echo :: Sleeping for 10 minutes
+sleep 600
+
+echo :: Calling internal assemble script
 /usr/libexec/s2i/assemble
