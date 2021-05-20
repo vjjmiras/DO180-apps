@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Wrapper for the run script" 
+
+exec /usr/libexec/s2i/run
