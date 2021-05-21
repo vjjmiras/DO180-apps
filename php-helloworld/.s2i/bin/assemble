@@ -1,6 +1,15 @@
 #!/bin/bash
 
+ARTIFACTS_TMP=/tmp/artifacts/vendor
+
 echo "Hello World"
+
+if [ -d $ARTIFACTS_TMP ]; then
+  mv $ARTIFACTS_TMP /opt/app-root/src/
+fi
+
+echo "Having a look to tmp before assembling:"
+find /tmp 2>/dev/null
 
 /usr/libexec/s2i/assemble
 
