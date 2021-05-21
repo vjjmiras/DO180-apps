@@ -1,11 +1,11 @@
 #!/bin/bash
 
-ARTIFACTS_DIR=/opt/apt-root/src/vendor
+ARTIFACTS_DIR=/opt/app-root/src/vendor
 
 if [ ! -d $ARTIFACTS_DIR ]; then
   mkdir $ARTIFACTS_DIR
 fi
 
-date >> ${ARTIFACTS_DIR}/timestamp
+echo "Build timestamp: $(date)" >> ${ARTIFACTS_DIR}/timestamp
 
 /usr/libexec/s2i/save-artifacts
