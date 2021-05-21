@@ -1,3 +1,11 @@
 #!/bin/bash
 
-tar cf - /etc/passwd
+ARTIFACTS_DIR=/opt/apt-root/src/vendor
+
+if [ ! -d $ARTIFACTS_DIR ]; then
+  mkdir $ARTIFACTS_DIR
+fi
+
+date >> ${ARTIFACTS_DIR}/timestamp
+
+/usr/libexec/s2i/save-artifacts

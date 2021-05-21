@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Starting the application
+../run &
+
+echo -n "Our test will be legend..."
+
+echo -n "(wait for it ...)"
+sleep 5
+echo "ary!"
+
+curl localhost:8080
+
+result=$?
+
+if [ $result -eq 0 ]; then
+  echo "Congrats! Test successful"
+else
+   exit $result
+fi
